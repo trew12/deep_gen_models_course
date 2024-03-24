@@ -31,7 +31,7 @@
 generator =  nn.Sequential(
     nn.ConvTranspose2d(latent_dim, 512, kernel_size=2, stride=1, padding=0, bias=False),
     nn.BatchNorm2d(512),
-    nn.ReLU(negative_slope=0.2, inplace=True),
+    nn.ReLU(inplace=True),
     CSPup(512),
     CSPup(256),
     CSPup(128),
